@@ -13,8 +13,7 @@ The problem may be caused because the script install folders, daemon, etc in the
 
 ### In the VPS:
 
-1.
-```
+1.```
 wget https://raw.githubusercontent.com/israelps95/Sinovate/main/update.sh
 ```
 
