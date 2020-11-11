@@ -14,7 +14,12 @@ The problem may be caused because the script install folders, daemon, etc in the
 -You must save the infinitynodeprivkey from the infinitenode.conf
 
 ### In the VPS:
-
+```
+su
+```
+```
+bash
+```
 ```
 wget https://raw.githubusercontent.com/israelps95/Sinovate/main/update.sh
 ```
@@ -33,6 +38,9 @@ Wait till it finishes.
 After it finishes, you can check the status of the synchronization with
 ```
 watch -n 5 '~/sin-cli getblockcount && ~/sin-cli masternode status && ~/sin-cli mnsync status'
+```
+```
+cd /root
 ```
 Then, you can jump here: https://docs.sinovate.io/#/double_run_guide
 
