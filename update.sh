@@ -1,7 +1,12 @@
 #!/bin/bash
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='sin.conf'
-
+#read user
+echo -e "Enter the username of the infinitynode user (default: sinovate)"
+read NODEUSER
+if [ -z "$NODEUSER" ]; then
+  NODEUSER="sinovate"
+fi
 ## Change where files are located
 CONFIGFOLDER="/root/.sin"
 COIN_DAEMON="/root/sind"
@@ -20,6 +25,11 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+function clean_past_wallet() {
+   rm -rf /$NODEUSER/.sin
+   rm -rf /$NODEUSER/sin-cli
+   rm -rf /$NODEUSER/sind
+}
 
 #function install_sentinel() {
 #  echo -e "${GREEN}Install sentinel.${NC}"
@@ -70,7 +80,7 @@ function compile_node() {
   COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
   tar xvzf $COIN_ZIP >/dev/null 2>&1
   compile_error
-  cp sin* /home/$NODEUSER
+  cp sin* /root
   compile_error
   strip $COIN_DAEMON $COIN_CLI
   cd - >/dev/null 2>&1
@@ -226,6 +236,7 @@ fi
 
 
 function checks() {
+systemctl stop $COIN_NAME.service
 if [[ $(lsb_release -d) < *16.04* ]]; then
   echo -e "${RED}You are not running Ubuntu 16.04 or later. Installation is cancelled.${NC}"
   exit 1
@@ -306,8 +317,10 @@ function setup_node() {
 clear
 
 checks
+clean_past_wallet
 create_user
 create_swap
 prepare_system
 compile_node
 setup_node
+
