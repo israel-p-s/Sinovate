@@ -43,18 +43,6 @@ function clean_past_wallet() {
 #  rm $CONFIGFOLDER/$COIN_NAME.cron >/dev/null 2>&1
 #}
 
-function create_user() {
-  if [ $(grep -c "^$NODEUSER:" /etc/passwd) == 0 ]; then
-    echo -e "$GREEN User $NODEUSER doesn't exist, creating new user"
-    useradd $NODEUSER
-    passwd $NODEUSER
-    mkhomedir_helper $NODEUSER
-	adduser $NODEUSER sudo
-	sed -i '/^PermitRootLogin[ \t]\+\w\+$/{ s//PermitRootLogin no/g; }' /etc/ssh/sshd_config
-  fi
-  clear
-}
-
 function create_swap() {
   #if there are less than 2GB of memory and no swap add 4gb of swap
   if (( $(free -m | awk '/^Mem:/{print $2}')<2000 )); then
@@ -318,7 +306,6 @@ clear
 
 checks
 clean_past_wallet
-create_user
 create_swap
 prepare_system
 compile_node
