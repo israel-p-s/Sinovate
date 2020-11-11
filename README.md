@@ -22,4 +22,18 @@ chmod +x update.sh
 ```
 sudo ./update.sh
 ```
-![Test Image 4](https://github.com/tograh/testrepository/3DTest.png)
+![Test Image 4](https://github.com/israelps95/Sinovate/blob/main/img_11.jpg)
+Here, paste your infinitynodeprivkey saved in "In the local wallet:".
+
+Wait till it finishes.
+
+After it finishes, you can check the status of the synchronization with
+```
+watch -n 5 '~/sin-cli getblockcount && ~/sin-cli masternode status && ~/sin-cli mnsync status'
+```
+Then, you can jump here: https://docs.sinovate.io/#/double_run_guide
+
+Follow in 
+```
+:~$ ./sin-cli infinitynode keypair
+```
