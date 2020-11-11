@@ -6,6 +6,8 @@ I had some problems for update my VPS to the new version.
 
 The problem may be caused because the script install folders, daemon, etc in the $HOME and the new daemon works in the /root.
 
+
+
 ## What to do for update my node to DIN?
 
 ### In the local wallet:
@@ -38,3 +40,7 @@ Follow in
 ```
 :~$ ./sin-cli infinitynode keypair
 ```
+
+
+## Donations
+You can donate SIN in: SiukZP176rkgk4xBa3MvnjpRp1gcUzbrcL
