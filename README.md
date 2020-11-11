@@ -14,6 +14,8 @@ You can check the changes from the original script in [CHANGES.md](https://githu
 -You must save the infinitynodeprivkey from the infinitenode.conf
 
 ### In the VPS:
+Login to your infinity user.
+
 ```
 su
 ```
@@ -29,6 +31,9 @@ chmod +x update.sh
 ```
 sudo ./update.sh
 ``` 
+
+You will be asked by your infinitynode user, write it.
+
 ![Image](https://github.com/israelps95/Sinovate/blob/main/img_11.jpg)
 
 Here, paste your infinitynodeprivkey saved in "In the local wallet:".
