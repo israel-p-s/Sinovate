@@ -6,7 +6,7 @@ I had some problems for update my VPS to the new version.
 
 The problem may be caused because the script install folders, daemon, etc in the $HOME and the new daemon works in the /root.
 
-
+You can check the changes from the original script in CHANGES.md
 
 ## What to do for update my node to DIN?
 
