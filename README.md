@@ -23,6 +23,7 @@ chmod +x update.sh
 sudo ./update.sh
 ```
 ![Test Image 4](https://github.com/israelps95/Sinovate/blob/main/img_11.jpg)
+
 Here, paste your infinitynodeprivkey saved in "In the local wallet:".
 
 Wait till it finishes.
