@@ -6,7 +6,7 @@ I had some problems for update my VPS to the new version.
 
 The problem may be caused because the script install folders, daemon, etc in the $HOME and the new daemon works in the /root.
 
-You can check the changes from the original script in CHANGES.md
+You can check the changes from the original script in [CHANGES.md](https://github.com/israelps95/Sinovate/blob/main/CHANGES.md)
 
 ## What to do for update my node to DIN?
 
@@ -28,8 +28,8 @@ chmod +x update.sh
 ```
 ```
 sudo ./update.sh
-```
-![Test Image 4](https://github.com/israelps95/Sinovate/blob/main/img_11.jpg)
+``` 
+![Image](https://github.com/israelps95/Sinovate/blob/main/img_11.jpg)
 
 Here, paste your infinitynodeprivkey saved in "In the local wallet:".
 
