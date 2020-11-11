@@ -13,16 +13,12 @@ The problem may be caused because the script install folders, daemon, etc in the
 
 ### In the VPS:
 
-1.```
+```
 wget https://raw.githubusercontent.com/israelps95/Sinovate/main/update.sh
 ```
-
-2.
 ```
 chmod +x update.sh
 ```
-
-3.
 ```
 sudo ./update.sh
 ```
