@@ -26,9 +26,9 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 function clean_past_wallet() {
-   rm -rf /$NODEUSER/.sin
-   rm -rf /$NODEUSER/sin-cli
-   rm -rf /$NODEUSER/sind
+   rm -rf /home/$NODEUSER/.sin
+   rm -rf /home/$NODEUSER/sin-cli
+   rm -rf /home/$NODEUSER/sind
 }
 
 #function install_sentinel() {
