@@ -8,3 +8,6 @@ The problem may be caused because the script install folders, daemon, etc in the
 
 ## What to do for update my node to DIN?
 
+### Requeriments:
+-You must save the infinitynodeprivkey from the infinitenode.conf
+
