@@ -8,9 +8,9 @@ if [ -z "$NODEUSER" ]; then
   NODEUSER="sinovate"
 fi
 ## Change where files are located
-CONFIGFOLDER="/root/.sin"
-COIN_DAEMON="/root/sind"
-COIN_CLI="/root/sin-cli"
+CONFIGFOLDER="/home/$NODEUSER/.sin"
+COIN_DAEMON="/home/$NODEUSER/sin-cli"
+COIN_CLI="/home/$NODEUSER/sind"
 ##
 COIN_REPO='https://github.com/SINOVATEblockchain/SIN-core/releases/latest/download/daemon.tar.gz'
 COIN_NAME='sinovate'
